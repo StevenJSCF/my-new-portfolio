@@ -43,7 +43,7 @@ const Intro = () => {
   return (
     <Fragment>
       <Head>
-        <title>Shiv&apos;s Portfolio</title>
+        <title>Joshua&apos;s Portfolio</title>
       </Head>
       <section id='home'>
         <div
@@ -55,23 +55,26 @@ const Intro = () => {
             ref={introRef}
           >
             <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
-              Hi There !
+              Hi There,
+            </p>
+            <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
+              I'm Steven Chiang
             </p>
             {/* Profile Name */}
             <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>
-              I&apos;m a 
+              I am a
               <span className='text-[#c72c6c] dark:text-[#07d0e5]'>
                 {" "}
-                Software Engineer <span className='text-white'>|</span>
+                Software Engineer
               </span>
             </p>
             <div className='mt-5 md:mt-10 flex gap-3'>
               {/* Hire Me Button */}
               <Link
                 className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'
-                href={"#getInTouch"}
+                href={"#about"}
               >
-                Hire me
+                About Me
               </Link>
               {/* Download CV Button */}
               <Link
@@ -87,7 +90,7 @@ const Intro = () => {
           {/* Image */}
           <div
             className={
-              "translate-x-[500px] transition-all opacity-0 duration-700 w-[400px] h-[300px] md:w-[500px] md:h-[500px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat rounded-full dark:shadow-black shadow-lg"
+              "translate-x-[500px] transition-all opacity-0 duration-700 w-[400px] h-[300px] md:w-[500px] md:h-[500px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat rounded-full shadow-black dark:shadow-[#d6d6d6] shadow-lg"
             }
             ref={profileRef}
             style={{ backgroundImage: "url(/images/profile-pic.jpg)" }}
