@@ -28,13 +28,13 @@ const SocialMedia = () => {
   }, [isSocial]);
 
     return (
-        <Fragment>
-            <div className='absolute left-[195px] bottom-[275px] social-hide flex' ref={socialRef} 
+        <Fragment> 
+            <div className='absolute left-[195px] bottom-[275px] md:bottom-[175px] social-hide flex' ref={socialRef} 
             >
                 {SocialMediaData.map((social) => (
                     <div
                         className={
-                            "text-3xl text-white rounded-full p-2 mr-4 hover:scale-[1.2] transition-all duration-500"
+                            "text-3xl text-white rounded-full p-2 mr-4 hover:scale-[1.2] transition-all duration-1000"
                         }
                         key={social.name}
                         style={{ background: social.color }}
