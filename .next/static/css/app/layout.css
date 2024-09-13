@@ -538,21 +538,6 @@ video {
 .left-\[195px\] {
   left: 195px;
 }
-.bottom-\[px\] {
-  bottom: px;
-}
-.bottom-\[0px\] {
-  bottom: 0px;
-}
-.bottom-\[27px\] {
-  bottom: 27px;
-}
-.bottom-\[200px\] {
-  bottom: 200px;
-}
-.bottom-\[2px\] {
-  bottom: 2px;
-}
 .z-10 {
   z-index: 10;
 }
@@ -652,6 +637,9 @@ video {
 }
 .border {
   border-width: 1px;
+}
+.border-none {
+  border-style: none;
 }
 .border-\[\#159e6e\] {
   --tw-border-opacity: 1;
@@ -821,6 +809,9 @@ video {
 .duration-700 {
   transition-duration: 700ms;
 }
+.duration-1000 {
+  transition-duration: 1000ms;
+}
 
 /* :root {
   --background: #ffffff;
@@ -917,7 +908,7 @@ div {
 }
 
 .social-show > div {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .hover\:scale-110:hover {
@@ -1000,42 +991,7 @@ div {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-@media (min-width: 640px) {
-
-  .sm\:bottom-\[250px\] {
-    bottom: 250px;
-  }
-
-  .sm\:bottom-\[2px\] {
-    bottom: 2px;
-  }
-
-  .sm\:bottom-\[350px\] {
-    bottom: 350px;
-  }
-}
-
 @media (min-width: 768px) {
-
-  .md\:static {
-    position: static;
-  }
-
-  .md\:relative {
-    position: relative;
-  }
-
-  .md\:bottom-\[\] {
-    bottom: ;
-  }
-
-  .md\:bottom-0 {
-    bottom: 0px;
-  }
-
-  .md\:bottom-\[200px\] {
-    bottom: 200px;
-  }
 
   .md\:bottom-\[175px\] {
     bottom: 175px;
@@ -1051,18 +1007,6 @@ div {
 
   .md\:mt-10 {
     margin-top: 2.5rem;
-  }
-
-  .md\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .md\:mt-6 {
-    margin-top: 1.5rem;
-  }
-
-  .md\:mt-40 {
-    margin-top: 10rem;
   }
 
   .md\:flex {
@@ -1095,70 +1039,6 @@ div {
     padding-top: 0px;
   }
 
-  .md\:pb-\[100px\] {
-    padding-bottom: 100px;
-  }
-
-  .md\:pb-\[50px\] {
-    padding-bottom: 50px;
-  }
-
-  .md\:pb-\[10px\] {
-    padding-bottom: 10px;
-  }
-
-  .md\:pb-\[5px\] {
-    padding-bottom: 5px;
-  }
-
-  .md\:pb-\[5xpx\] {
-    padding-bottom: 5xpx;
-  }
-
-  .md\:pb-\[1px\] {
-    padding-bottom: 1px;
-  }
-
-  .md\:pb-4 {
-    padding-bottom: 1rem;
-  }
-
-  .md\:pb-1 {
-    padding-bottom: 0.25rem;
-  }
-
-  .md\:pb-9 {
-    padding-bottom: 2.25rem;
-  }
-
-  .md\:pb-3 {
-    padding-bottom: 0.75rem;
-  }
-
-  .md\:pb-\[20px\] {
-    padding-bottom: 20px;
-  }
-
-  .md\:pb-0 {
-    padding-bottom: 0px;
-  }
-
-  .md\:pb-10 {
-    padding-bottom: 2.5rem;
-  }
-
-  .md\:pb-\[px\] {
-    padding-bottom: px;
-  }
-
-  .md\:pb-6 {
-    padding-bottom: 1.5rem;
-  }
-
-  .md\:pb-\[0px\] {
-    padding-bottom: 0px;
-  }
-
   .md\:text-left {
     text-align: left;
   }
@@ -1176,3 +1056,4 @@ div {
     padding-right: 200px;
   }
 }
+
