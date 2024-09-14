@@ -2,7 +2,7 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
-import { SocialMediaData } from "./SocialMediaItems";
+import { SocialMediaData } from "../../app/portfolio-data/SocialMediaItems";
 
 const SocialMedia = () => {
   const [isSocial, setIsSocial] = useState(false);

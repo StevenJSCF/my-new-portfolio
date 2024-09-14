@@ -4,7 +4,7 @@ import Link from "next/link";
 import { DiTechcrunch } from "react-icons/di";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
-import { NavbarMenuItems } from "./NavbarItems";
+import { NavbarMenuItems } from "../../app/portfolio-data/NavbarItems";
 
 
 // import MobileNavbar from "./SidebarMobile";
