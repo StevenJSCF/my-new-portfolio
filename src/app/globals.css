@@ -111,5 +111,33 @@ div {
 }
 
 .social-show > div {
-  transform: scale(0.9);
+  transform: scale(1);
 }
+
+/* Titles pop up */
+
+.pop-down-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.5s ease-in-out;
+}
+
+.pop-up-tittle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*About Page Profile Image*/
+
+.pop-down-about-image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.5s ease-in-out;
+}
+
+.pop-up-about-image {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
