@@ -5,9 +5,9 @@ import Theme from "../components/navbar/Theme";
 
 const Navbar = dynamic(() => import("../components/navbar/Navbar"));
 const HomePage = dynamic(() => import("./sections/Home"));
-const SocialMedia = dynamic(() => import("../components/socialMedia/SocialMedia"));
+const SocialMedia = dynamic(() =>import("../components/socialMedia/SocialMedia"));
 const About = dynamic(() => import("./sections/About"));
-
+const TeckStack = dynamic(() => import("./sections/TechStack"));
 
 export default function Home() {
   return (
@@ -22,7 +22,8 @@ export default function Home() {
           <SocialMedia />
           {/* About me */}
           <About />
-
+          {/* Tech Stacks */}
+          <TeckStack/>
         </div>
       </Theme>
     </Fragment>
