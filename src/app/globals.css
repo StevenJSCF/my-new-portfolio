@@ -138,19 +138,63 @@ div {
 .pop-up-about-image {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease-out 0.5s, transform 1.5s ease-in-out; 
+  transition: opacity 0.5s ease-out 0.5s, transform 1.5s ease-in-out;
 }
 
 /*About Page Description*/
 
 .pop-down-about-desc {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(20px);
   transition: opacity 0.5s ease-out, transform 2s ease-in;
 }
 
 .pop-up-about-desc {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease-out 1.0s, transform 2s ease-in-out; 
+  transition: opacity 0.5s ease-out 1s, transform 2s ease-in-out;
+}
+
+/*Tech Stack Bar*/
+
+.pop-down-tech-button {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 1.5s ease-in;
+}
+
+.pop-up-tech-button {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out 0.5s, transform 1.5s ease-in-out;
+}
+
+/*Tech boxes */
+
+/* Individual skill icons handle upward movement and delayed animation */
+@keyframes moveUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skill-icon {
+  opacity: 0; /* Initial state */
+  animation: moveUp 0.7s ease-in forwards; /* Apply animation */
+}
+
+/* Container controls opacity and movement */
+.pop-down-tech-box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in, transform 1.5s ease-in;
+}
+
+.pop-up-tech-box {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease-in 1s, transform 1.5s ease-in-out;
 }
