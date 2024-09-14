@@ -6,12 +6,13 @@ import { TechStackData } from "../portfolio-data/TechStackItems";
 // import Loader from "../../components/layout/loader/Loader";
 
 const TechStack = () => {
-  const [section, setSection] = useState("Advance");
+  const [section, setSection] = useState("Languages");
   const [sectionData, setSectionData] = useState([]);
   const [istechStack, setIsTechStack] = useState(false);
   const techStackRef = useRef();
   const techBoxesRef = useRef();
   const buttonsRef = useRef();
+  const teckStackTittleRef = useRef();
 
   useEffect(() => {
     const getScreenWidth = () =>
@@ -31,11 +32,13 @@ const TechStack = () => {
     techStackObserver.observe(techStackRef.current);
 
     if (istechStack) {
-      techBoxesRef.current.classList.add("pop-up-child");
-      buttonsRef.current.classList.add("pop-up");
+      techBoxesRef.current.classList.add("pop-up-tech-box");
+      buttonsRef.current.classList.add("pop-up-tech-button");
+      teckStackTittleRef.current.classList.add("pop-up-tittle");
     } else {
-      techBoxesRef.current.classList.remove("pop-up-child");
-      buttonsRef.current.classList.remove("pop-up");
+      techBoxesRef.current.classList.remove("pop-up-tech-box");
+      buttonsRef.current.classList.remove("pop-up-tech-button");
+      teckStackTittleRef.current.classList.remove("pop-up-tittle");
     }
   }, [istechStack]);
 
@@ -46,23 +49,25 @@ const TechStack = () => {
     setSectionData(selectedSection ? selectedSection[section] : []);
 
     setTimeout(() => {
-      techBoxesRef.current.classList.add("pop-up-child");
+      techBoxesRef.current.classList.add("pop-up-tech-box");
     }, 300);
   }, [section]);
 
   return (
     <Fragment>
       <section
-        className='min-h-[100vh] shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden'
-        id='techStack'
+        className="min-h-[100vh] shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden"
+        id="techStack"
         ref={techStackRef}
       >
-        <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
-          <FaLaptopCode /> Tech Stack
-        </h2>
+        <div className="pop-down-title" ref={teckStackTittleRef}>
+          <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3">
+            <FaLaptopCode /> Tech Stack
+          </h2>
+        </div>
 
         <div
-          className='pop-down transition-all w-fit duration-500 m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden'
+          className="pop-down-tech-button w-fit m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden"
           ref={buttonsRef}
         >
           <button
@@ -72,7 +77,7 @@ const TechStack = () => {
             onClick={(e) => {
               setSection(e.target.innerText);
               if (section !== e.target.innerText)
-                techBoxesRef.current.classList.remove("pop-up-child");
+                techBoxesRef.current.classList.remove("pop-up-tech-box");
             }}
           >
             Languages
@@ -84,10 +89,10 @@ const TechStack = () => {
             onClick={(e) => {
               setSection(e.target.innerText);
               if (section !== e.target.innerText)
-                techBoxesRef.current.classList.remove("pop-up-child");
+                techBoxesRef.current.classList.remove("pop-up-tech-box");
             }}
           >
-            Tech 
+            Tech
           </button>
           <button
             className={`w-[100px] md:w-[150px] p-2 font-bold ${
@@ -96,7 +101,7 @@ const TechStack = () => {
             onClick={(e) => {
               setSection(e.target.innerText);
               if (section !== e.target.innerText)
-                techBoxesRef.current.classList.remove("pop-up-child");
+                techBoxesRef.current.classList.remove("pop-up-tech-box");
             }}
           >
             Cloud/Tools
@@ -104,19 +109,21 @@ const TechStack = () => {
         </div>
 
         <div
-          className='pop-down-child flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5'
+          className="pop-down-tech-box flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5"
           ref={techBoxesRef}
         >
-          {sectionData.length !== 0 ? 
-            sectionData.map((skill) => (
-              <div
-                className='transition-all duration-700 px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center'
-                key={skill.name}
-              >
-                <p>{skill.icon}</p>
-                <p>{skill.name}</p>
-              </div>
-            )): null}
+          {sectionData.length !== 0
+            ? sectionData.map((skill, index) => (
+                <div
+                  className="skill-icon px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center"
+                  key={skill.name}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <p>{skill.icon}</p>
+                  <p>{skill.name}</p>
+                </div>
+              ))
+            : null}
         </div>
       </section>
     </Fragment>
