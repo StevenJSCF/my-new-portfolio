@@ -8,6 +8,7 @@ const About = () => {
   const aboutRef = useRef();
   const profile2Ref = useRef();
   const aboutInfoRef = useRef();
+  const aboutTitleRef = useRef();
 
   useEffect(() => {
     const getScreenWidth = () =>
@@ -29,9 +30,11 @@ const About = () => {
     if (isAbout) {
       profile2Ref.current.classList.add("slide-in");
       aboutInfoRef.current.classList.add("slide-in");
+      aboutTitleRef.current.classList.add("pop-up-tittle");
     } else {
       profile2Ref.current.classList.remove("slide-in");
       aboutInfoRef.current.classList.remove("slide-in");
+      aboutTitleRef.current.classList.remove("pop-up-tittle");
     }
   }, [isAbout]);
 
@@ -42,12 +45,17 @@ const About = () => {
   id='about'
   ref={aboutRef}
 >
+  <div
+  className="pop-down-title"
+    ref={aboutTitleRef}
+  >
         <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
           <FaUser />About<span className="text-[#6e0fa9] dark:text-[#c975ff]">Me</span>
         </h2>
+  </div>
         <div className='pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
           <div
-            className='bg-[url(/images/profile2.jpg)] shadow-zinc-300 dark:shadow-zinc-700 shadow-sm transition-all duration-700 translate-x-[-900px] bg-blue-400 w-[200px] h-[350px] m-auto bg-cover bg-no-repeat'
+            className='bg-[url(/images/about-pic.jpg)] shadow-black dark:shadow-[#d6d6d6] shadow-lg transition-all duration-700 translate-x-[-900px] bg-blue-400 w-[300px] h-[350px] m-auto bg-cover bg-no-repeat'
             ref={profile2Ref}
           />
           <div
