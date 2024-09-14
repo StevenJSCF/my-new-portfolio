@@ -28,12 +28,12 @@ const About = () => {
     aboutObserver.observe(aboutRef.current);
 
     if (isAbout) {
-      profile2Ref.current.classList.add("slide-in");
-      aboutInfoRef.current.classList.add("slide-in");
+      profile2Ref.current.classList.add("pop-up-about-image");
+      aboutInfoRef.current.classList.add("pop-up-about-desc");
       aboutTitleRef.current.classList.add("pop-up-tittle");
     } else {
-      profile2Ref.current.classList.remove("slide-in");
-      aboutInfoRef.current.classList.remove("slide-in");
+      profile2Ref.current.classList.remove("pop-up-about-image");
+      aboutInfoRef.current.classList.remove("pop-up-about-desc");
       aboutTitleRef.current.classList.remove("pop-up-tittle");
     }
   }, [isAbout]);
@@ -55,11 +55,11 @@ const About = () => {
   </div>
         <div className='pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
           <div
-            className='bg-[url(/images/about-pic.jpg)] shadow-black dark:shadow-[#d6d6d6] shadow-lg transition-all duration-700 translate-x-[-900px] bg-blue-400 w-[300px] h-[350px] m-auto bg-cover bg-no-repeat'
+            className='bg-[url(/images/about-pic.jpg)] pop-down-about-image shadow-black dark:shadow-[#d6d6d6] shadow-lg w-[300px] h-[350px] m-auto bg-cover bg-no-repeat'
             ref={profile2Ref}
           />
           <div
-            className='text-lg p-2 translate-x-[900px] opacity-0 transition-all duration-700 mt-4 md:mt-0 md:w-[50%] text-center md:text-left rounded'
+            className='text-lg p-2 opacity-0 pop-down-about-desc transition-all mt-4 md:mt-0 md:w-[50%] text-center md:text-left rounded'
             ref={aboutInfoRef}
           >
             <p className='text-3xl text-center md:text-left font-semibold text-[#159e6e] dark:text-[#17c1ff]'>
