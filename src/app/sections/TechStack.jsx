@@ -53,7 +53,7 @@ const TechStack = () => {
   return (
     <Fragment>
       <section
-        className='shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden'
+        className='min-h-[100vh] shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden'
         id='techStack'
         ref={techStackRef}
       >
@@ -67,7 +67,7 @@ const TechStack = () => {
         >
           <button
             className={`w-[120px] md:w-[150px] p-2 font-bold ${
-              section === "Advance" ? "bg-red-600" : null
+              section === "Languages" ? "bg-red-600" : null
             } transition-all`}
             onClick={(e) => {
               setSection(e.target.innerText);
@@ -75,11 +75,11 @@ const TechStack = () => {
                 techBoxesRef.current.classList.remove("pop-up-child");
             }}
           >
-            Advance
+            Languages
           </button>
           <button
             className={`w-[120px] md:w-[150px] p-2 font-bold ${
-              section === "Good" ? "bg-red-600" : null
+              section === "Tech" ? "bg-red-600" : null
             } transition-all border-l border-r border-black dark:border-white border-solid`}
             onClick={(e) => {
               setSection(e.target.innerText);
@@ -87,11 +87,11 @@ const TechStack = () => {
                 techBoxesRef.current.classList.remove("pop-up-child");
             }}
           >
-            Good
+            Tech 
           </button>
           <button
             className={`w-[100px] md:w-[150px] p-2 font-bold ${
-              section === "Familiar" ? "bg-red-600" : null
+              section === "Cloud/Tools" ? "bg-red-600" : null
             } transition-all`}
             onClick={(e) => {
               setSection(e.target.innerText);
@@ -99,7 +99,7 @@ const TechStack = () => {
                 techBoxesRef.current.classList.remove("pop-up-child");
             }}
           >
-            Familiar
+            Cloud/Tools
           </button>
         </div>
 
@@ -108,13 +108,13 @@ const TechStack = () => {
           ref={techBoxesRef}
         >
           {sectionData.length !== 0 ? 
-            sectionData.map((tech) => (
+            sectionData.map((skill) => (
               <div
                 className='transition-all duration-700 px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center'
-                key={tech.name}
+                key={skill.name}
               >
-                <p>{tech.icon}</p>
-                <p>{tech.name}</p>
+                <p>{skill.icon}</p>
+                <p>{skill.name}</p>
               </div>
             )): null}
         </div>
