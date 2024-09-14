@@ -589,6 +589,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-\[300px\] {
+  width: 300px;
+}
 .translate-x-\[-500px\] {
   --tw-translate-x: -500px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -660,8 +663,11 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\/images\/profile2\.jpg\)\] {
-  background-image: url(/images/profile2.jpg);
+.bg-\[url\(\/images\/profile-pic\.jpg\)\] {
+  background-image: url(/images/profile-pic.jpg);
+}
+.bg-\[url\(\/images\/about-pic\.jpg\)\] {
+  background-image: url(/images/about-pic.jpg);
 }
 .bg-cover {
   background-size: cover;
@@ -803,14 +809,14 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.duration-1000 {
+  transition-duration: 1000ms;
+}
 .duration-500 {
   transition-duration: 500ms;
 }
 .duration-700 {
   transition-duration: 700ms;
-}
-.duration-1000 {
-  transition-duration: 1000ms;
 }
 
 /* :root {
@@ -909,6 +915,32 @@ div {
 
 .social-show > div {
   transform: scale(1);
+}
+
+/* Titles pop up */
+
+.pop-down-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.5s ease-in-out;
+}
+
+.pop-up-tittle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*About Page Profile Image*/
+
+.pop-down-about-image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.5s ease-in-out;
+}
+
+.pop-up-about-image {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hover\:scale-110:hover {
@@ -1056,4 +1088,6 @@ div {
     padding-right: 200px;
   }
 }
+
+
 
