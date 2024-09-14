@@ -119,7 +119,7 @@ div {
 .pop-down-title {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 0.5s ease-in-out;
+  transition: opacity 1s ease-out, transform 1s ease-in-out;
 }
 
 .pop-up-tittle {
@@ -131,13 +131,26 @@ div {
 
 .pop-down-about-image {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 0.5s ease-in-out;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 1.5s ease-in;
 }
 
 .pop-up-about-image {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.5s ease-out 0.5s, transform 1.5s ease-in-out; 
 }
 
+/*About Page Description*/
 
+.pop-down-about-desc {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 2s ease-in;
+}
+
+.pop-up-about-desc {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out 1.0s, transform 2s ease-in-out; 
+}
