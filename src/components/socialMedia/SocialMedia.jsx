@@ -34,7 +34,7 @@ const SocialMedia = () => {
                 {SocialMediaData.map((social) => (
                     <div
                         className={
-                            "text-3xl text-white rounded-full p-2 mr-4 hover:scale-[1.2] transition-all duration-1000"
+                            "text-3xl text-white rounded-full p-2 mr-4 hover:scale-[1.2] transition-all duration-500"
                         }
                         key={social.name}
                         style={{ background: social.color }}
