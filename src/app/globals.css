@@ -116,7 +116,7 @@ div {
 
 /* Titles pop up */
 
-.pop-down-title {
+.pop-down-tittle {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease-out, transform 1s ease-in-out;
@@ -210,4 +210,17 @@ div {
 .scroll-container {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+
+.pop-down-projects {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 1.5s ease-in;
+}
+
+.pop-up-projects {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-out 0.5s, transform 1.5s ease-in-out;
 }
