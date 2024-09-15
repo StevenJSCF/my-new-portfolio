@@ -5,9 +5,13 @@ import Theme from "../components/navbar/Theme";
 
 const Navbar = dynamic(() => import("../components/navbar/Navbar"));
 const HomePage = dynamic(() => import("./sections/Home"));
-const SocialMedia = dynamic(() =>import("../components/socialMedia/SocialMedia"));
+const SocialMedia = dynamic(() =>
+  import("../components/socialMedia/SocialMedia")
+);
 const About = dynamic(() => import("./sections/About"));
 const TeckStack = dynamic(() => import("./sections/TechStack"));
+const Education = dynamic(() => import("./sections/Education"));
+const Projects = dynamic(() => import("./sections/Projects"));
 
 export default function Home() {
   return (
@@ -23,7 +27,11 @@ export default function Home() {
           {/* About me */}
           <About />
           {/* Tech Stacks */}
-          <TeckStack/>
+          <TeckStack />
+          {/* Education */}
+          <Education />
+          {/* Education */}
+          <Projects />
         </div>
       </Theme>
     </Fragment>
