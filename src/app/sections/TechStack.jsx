@@ -60,7 +60,7 @@ const TechStack = () => {
         id="techStack"
         ref={techStackRef}
       >
-        <div className="pop-down-title" ref={teckStackTittleRef}>
+        <div className="pop-down-tittle" ref={teckStackTittleRef}>
           <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3">
             <FaLaptopCode /> Tech Stack
           </h2>

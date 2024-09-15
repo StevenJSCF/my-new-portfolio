@@ -45,7 +45,7 @@ const About = () => {
         id="about"
         ref={aboutRef}
       >
-        <div className="pop-down-title" ref={aboutTitleRef}>
+        <div className="pop-down-tittle" ref={aboutTitleRef}>
           <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3">
             <FaUser />
             About Me

@@ -9,6 +9,7 @@ const Education = () => {
   const [isEducation, setIsEducation] = useState(false);
   const educationRef = useRef();
   const educationBoxesRef = useRef();
+  const educationTittleRef = useRef();
 
   useEffect(() => {
     const getScreenWidth = () =>
@@ -29,8 +30,10 @@ const Education = () => {
 
     if (isEducation) {
       educationBoxesRef.current.classList.add("pop-up-child");
+      educationTittleRef.current.classList.add("pop-up-tittle");
     } else {
       educationBoxesRef.current.classList.remove("pop-up-child");
+      educationTittleRef.current.classList.remove("pop-up-tittle");
     }
   }, [isEducation]);
 
@@ -41,9 +44,13 @@ const Education = () => {
         id="education"
         ref={educationRef}
       >
+
+        <div className="pop-down-tittle" ref={educationTittleRef}>
+
         <h2 className="text-3xl font-bold text-center p-4 flex justify-center items-center gap-3">
           <IoSchoolSharp /> Education
         </h2>
+        </div>
 
         <div
           className="pop-down-child pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[20px] md:gap-[50px]"
