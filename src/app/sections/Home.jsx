@@ -58,7 +58,7 @@ const Intro = () => {
               Hi There,
             </p>
             <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
-              I'm Steven Chiang
+              I&apos;m Steven Chiang
             </p>
             {/* Profile Name */}
             <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>

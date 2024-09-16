@@ -61,7 +61,7 @@ const About = () => {
             ref={aboutInfoRef}
           >
             <p className="text-3xl text-center md:text-left font-semibold text-[#159e6e] dark:text-[#17c1ff]">
-              I'm Joshua Chiang
+              I&apos;m Joshua Chiang
             </p>
             <p className="text-center md:text-left text-red-600 mt-1">
               Software Engineer at Iowa State University
