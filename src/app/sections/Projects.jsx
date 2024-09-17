@@ -66,17 +66,31 @@ const Projects = () => {
             {ProjectsData.map((project) => (
               <div
                 key={project.name}
-                className="relative w-[375px] h-[700px] flex-shrink-0 cursor-pointer bg-cover bg-center rounded-3xl hover:scale-105 transition-transform duration-500"
+                className="flex flex-col items-center w-[375px] flex-shrink-0 cursor-pointer rounded-3xl hover:scale-105 transition-transform duration-500 shadow-md shadow-black dark:shadow-white"
                 style={{
-                  backgroundImage: `url(${project.image})`,
-                  margin: '10px', // Add a margin to create space between the projects
+                  margin: "10px", // Add a margin to create space between the projects
                 }}
                 onClick={() => console.log(`Open modal for ${project.name}`)}
               >
-                <div className="absolute top-0 left-0 right-0 bg-black bg-opacity-50 text-white p-6 rounded-t-3xl">
+                <div className="bg-gray-400 text-white p-6 rounded-t-3xl w-full text-center">
                   <h3 className="text-lg font-bold">{project.name}</h3>
-                  <p className="text-sm">{project.description}</p>
+                  <div className="flex gap-1 mt-1 flex-wrap justify-center">
+                    {project.techStack.map((tech) => (
+                      <p
+                        className="px-1 text-sm rounded bg-blue-500 text-white"
+                        key={tech}
+                      >
+                        {tech}
+                      </p>
+                    ))}
+                  </div>
                 </div>
+                <div
+                  className="relative w-full h-[500px] bg-cover bg-center rounded-b-3xl"
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                  }}
+                ></div>
               </div>
             ))}
           </div>
