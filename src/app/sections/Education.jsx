@@ -29,10 +29,10 @@ const Education = () => {
     educationObserver.observe(educationRef.current);
 
     if (isEducation) {
-      educationBoxesRef.current.classList.add("pop-up-child");
+      educationBoxesRef.current.classList.add("pop-up-1");
       educationTittleRef.current.classList.add("pop-up-tittle");
     } else {
-      educationBoxesRef.current.classList.remove("pop-up-child");
+      educationBoxesRef.current.classList.remove("pop-up-1");
       educationTittleRef.current.classList.remove("pop-up-tittle");
     }
   }, [isEducation]);
@@ -53,7 +53,7 @@ const Education = () => {
         </div>
 
         <div
-          className="pop-down-child pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[20px] md:gap-[50px]"
+          className="pop-down-1 pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[20px] md:gap-[50px]"
           ref={educationBoxesRef}
         >
           {EducationData.map((education) => (

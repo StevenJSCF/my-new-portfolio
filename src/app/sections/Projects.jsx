@@ -31,10 +31,10 @@ const Projects = () => {
 
     if (isProject) {
       projectTittleRef.current.classList.add("pop-up-tittle");
-      projectBoxesRef.current.classList.add("pop-up-projects");
+      projectBoxesRef.current.classList.add("pop-up-1");
     } else {
       projectTittleRef.current.classList.remove("pop-up-tittle");
-      projectBoxesRef.current.classList.remove("pop-up-projects");
+      projectBoxesRef.current.classList.remove("pop-up-1");
     }
   }, [isProject]);
 
@@ -62,7 +62,7 @@ const Projects = () => {
           className="flex gap-5 py-4 px-6 pl-20 space-x-4 overflow-x-auto scroll-container"
           ref={scrollContainer}
         >
-          <div className="pop-down-projects flex" ref={projectBoxesRef}>
+          <div className="pop-down-1 flex" ref={projectBoxesRef}>
             {ProjectsData.map((project) => (
               <div
                 key={project.name}

@@ -34,11 +34,11 @@ const Intro = () => {
       homeObserver.observe(homeRef.current);
 
       if (isHome) {
-        profileRef.current.classList.add("slide-in");
-        introRef.current.classList.add("slide-in");
+        profileRef.current.classList.add("pop-up-2");
+        introRef.current.classList.add("pop-up-1");
       } else {
-        profileRef.current.classList.remove("slide-in");
-        introRef.current.classList.remove("slide-in");
+        profileRef.current.classList.remove("pop-up-2");
+        introRef.current.classList.remove("pop-up-1");
       }
     }
   }, [homeRef, isHome]);
@@ -54,7 +54,7 @@ const Intro = () => {
           ref={homeRef}
         >
           <div
-            className="translate-x-[-500px] transition-all duration-700 opacity-0"
+            className="pop-down-1 translate-x-[-500px] transition-all duration-700 opacity-0"
             ref={introRef}
           >
             <p className="py-2 text-2xl md:text-4xl font-semibold font-sans">
@@ -98,7 +98,7 @@ const Intro = () => {
           {/* Image */}
           <div
             className={
-              "translate-x-[500px] transition-all opacity-0 duration-700 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat rounded-full shadow-black dark:shadow-[#d6d6d6] shadow-lg"
+              "pop-down-2 translate-x-[500px] transition-all opacity-0 duration-700 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat rounded-full shadow-black dark:shadow-[#d6d6d6] shadow-lg"
             }
             ref={profileRef}
             style={{ backgroundImage: "url(/images/profile-pic.jpg)" }}

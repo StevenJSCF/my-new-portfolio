@@ -33,11 +33,11 @@ const TechStack = () => {
 
     if (istechStack) {
       techBoxesRef.current.classList.add("pop-up-tech-box");
-      buttonsRef.current.classList.add("pop-up-tech-button");
+      buttonsRef.current.classList.add("pop-up-1");
       teckStackTittleRef.current.classList.add("pop-up-tittle");
     } else {
       techBoxesRef.current.classList.remove("pop-up-tech-box");
-      buttonsRef.current.classList.remove("pop-up-tech-button");
+      buttonsRef.current.classList.remove("pop-up-1");
       teckStackTittleRef.current.classList.remove("pop-up-tittle");
     }
   }, [istechStack]);
@@ -67,7 +67,7 @@ const TechStack = () => {
         </div>
 
         <div
-          className="pop-down-tech-button w-fit m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden"
+          className="pop-down-1 w-fit m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden"
           ref={buttonsRef}
         >
           <button
