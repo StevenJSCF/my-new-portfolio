@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/sections/Home.jsx -> ../../components/socialMedia/SocialMedia\":{\"id\":\"app/sections/Home.jsx -> ../../components/socialMedia/SocialMedia\",\"files\":[\"static/chunks/_app-pages-browser_src_components_socialMedia_SocialMedia_jsx.js\"]}}"
