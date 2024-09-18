@@ -29,7 +29,7 @@ const SocialMedia = () => {
 
     return (
         <Fragment> 
-            <div className='absolute left-[195px] bottom-[275px] md:bottom-[175px] social-hide flex' ref={socialRef} 
+            <div className='social-hide flex mt-8' ref={socialRef} 
             >
                 {SocialMediaData.map((social) => (
                     <div
