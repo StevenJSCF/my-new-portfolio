@@ -28,12 +28,12 @@ const About = () => {
     aboutObserver.observe(aboutRef.current);
 
     if (isAbout) {
-      profile2Ref.current.classList.add("pop-up-about-image");
-      aboutInfoRef.current.classList.add("pop-up-about-desc");
+      profile2Ref.current.classList.add("pop-up-1");
+      aboutInfoRef.current.classList.add("pop-up-2");
       aboutTitleRef.current.classList.add("pop-up-tittle");
     } else {
-      profile2Ref.current.classList.remove("pop-up-about-image");
-      aboutInfoRef.current.classList.remove("pop-up-about-desc");
+      profile2Ref.current.classList.remove("pop-up-1");
+      aboutInfoRef.current.classList.remove("pop-up-2");
       aboutTitleRef.current.classList.remove("pop-up-tittle");
     }
   }, [isAbout]);
@@ -53,11 +53,11 @@ const About = () => {
         </div>
         <div className="pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]">
           <div
-            className="bg-[url(/images/about-pic.jpg)] pop-down-about-image shadow-black dark:shadow-[#d6d6d6] shadow-lg w-[300px] h-[350px] m-auto bg-cover bg-no-repeat"
+            className="bg-[url(/images/about-pic.jpg)] pop-down-1 shadow-black dark:shadow-[#d6d6d6] shadow-lg w-[300px] h-[350px] m-auto bg-cover bg-no-repeat"
             ref={profile2Ref}
           />
           <div
-            className="text-lg p-2 opacity-0 pop-down-about-desc transition-all mt-4 md:mt-0 md:w-[50%] text-center md:text-left rounded"
+            className="text-lg p-2 opacity-0 pop-down-2 transition-all mt-4 md:mt-0 md:w-[50%] text-center md:text-left rounded"
             ref={aboutInfoRef}
           >
             <p className="text-3xl text-center md:text-left font-semibold text-[#159e6e] dark:text-[#17c1ff]">
@@ -72,10 +72,10 @@ const About = () => {
                 Hello my name is Joshua but I go by my middle name Steven, I am
                 a Software Engineer at Iowa State University. I was born and
                 raised in Lara, Venezuela. I am a very passionate person about
-                technology and software development. development, I tend to have
-                an inclination towards backend development, as is what I have
-                been mostly exposed to. However, I love to learn new things and
-                I am always looking for new challenges.
+                technology and software development. I tend to have an
+                inclination towards backend development, as is what I have been
+                mostly exposed to. However, I love to learn new things and I am
+                always looking for new challenges.
               </p>
             </div>
           </div>
