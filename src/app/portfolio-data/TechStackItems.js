@@ -18,6 +18,7 @@ import {
   FaCss3,
   FaReact,
   FaBootstrap,
+  FaNodeJs,
 } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 
@@ -95,6 +96,12 @@ export const TechStackData = [
       {
         name: "MongoDB",
         icon: <DiMongodb className="md:text-4xl text-2xl" color="#47A248" />,
+      },
+      {
+        name: "Node.js",
+        icon: (
+          <FaNodeJs className="md:text-4xl text-2xl" color="#68A063" />
+        ),
       },
       {
         name: "Spring Boot",
