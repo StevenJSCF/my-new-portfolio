@@ -8,9 +8,9 @@ export const ProjectsData = [
   },
   {
     name: "Easy Cook",
-    description: "This is the project description",
+    description: "This is the project descriptionThis is the project descriptionThis is the project descriptionThis is the project descriptionv",
     image: "/images/project-image.jpg",
-    techStack: ["Next.js", "OpenAI", "Clerk", "NeonDB", "Stripe", "AWS"],
+    techStack: ["Next.js", "OpenAI", "Clerk", "NeonDB", "Stripe", "AWS "],
     link: "url link",
   },
   {
