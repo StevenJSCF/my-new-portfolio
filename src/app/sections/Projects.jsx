@@ -8,25 +8,38 @@ const Modal = ({ project, onClose }) => {
     if (!project) return null;
   
     return (
-      <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50" onClick={onClose}>
-        <div className="bg-white rounded-lg shadow-lg p-8 relative max-w-md mx-auto" onClick={(e) => e.stopPropagation()}>
-          <button className="absolute top-2 right-2 text-2xl font-bold text-gray-600" onClick={onClose}>
+      <div
+        className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+        onClick={onClose}
+      >
+        <div
+          className="bg-white rounded-lg shadow-lg p-8 relative w-full max-w-lg mx-4 md:mx-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            className="absolute top-2 right-2 text-2xl font-bold text-gray-600"
+            onClick={onClose}
+          >
             &times;
           </button>
-          <h2 className="text-2xl text-center font-bold mb-4 dark:text-black">{project.name}</h2>
-          <div className="flex gap-2">
+          <h2 className="text-2xl text-center font-bold mb-4 dark:text-black">
+            {project.name}
+          </h2>
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
             {project.techStack.map((tech) => (
               <span key={tech} className="px-2 py-1 bg-gray-500 text-white rounded">
                 {tech}
               </span>
             ))}
           </div>
-          <p className="text-lg mb-4 dark:text-black">{project.description}</p>
+          <p className="text-lg mb-4 dark:text-black text-center">
+            {project.description}
+          </p>
         </div>
       </div>
     );
   };
-
+  
 const Projects = () => {
   // Correctly initialize the scrollContainer with a type
   const scrollContainer = useRef(null);
