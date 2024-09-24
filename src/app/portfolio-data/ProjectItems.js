@@ -35,8 +35,8 @@ export const ProjectsData = [
     name: "Fit Fusion",
     description: "React website that allows users to search exercises and create a workout plan. Users can also create their own mealplan and track their daily calorie intake.",
     image: "/images/fitfusion.jpg",
-    techStackDisplay: ["React", "JavaScript", "MongoDB", "TailwindCSS"],
-    techStack: ["React", "JavaScript", "MongoDB", "TailwindCSS"],
+    techStackDisplay: ["React", "Node.js", "JavaScript", "MongoDB", "TailwindCSS"],
+    techStack: ["React", "Node.js", "JavaScript", "MongoDB", "TailwindCSS"],
     link: "https://github.com/StevenJSCF/Fit-Fusion",
   },
   // {
