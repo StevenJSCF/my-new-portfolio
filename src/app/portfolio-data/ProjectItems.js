@@ -37,7 +37,7 @@ export const ProjectsData = [
     image: "/images/fitfusion.jpg",
     techStackDisplay: ["React", "JavaScript", "MongoDB", "TailwindCSS"],
     techStack: ["React", "JavaScript", "MongoDB", "TailwindCSS"],
-    link: "url link",
+    link: "https://github.com/StevenJSCF/Fit-Fusion",
   },
   // {
   //   name: "Project name 3",
