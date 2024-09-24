@@ -3,43 +3,53 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { FaLaptopCode } from "react-icons/fa";
 import { ProjectsData } from "../portfolio-data/ProjectItems";
 import { FaChevronCircleRight, FaChevronCircleLeft } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import Link from "next/link";
 
 const Modal = ({ project, onClose }) => {
-    if (!project) return null;
-  
-    return (
+  if (!project) return null;
+
+  return (
+    <div
+      className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+      onClick={onClose}
+    >
       <div
-        className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
-        onClick={onClose}
+        className="bg-white rounded-lg shadow-lg p-8 relative w-full max-w-lg mx-4 md:mx-auto"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div
-          className="bg-white rounded-lg shadow-lg p-8 relative w-full max-w-lg mx-4 md:mx-auto"
-          onClick={(e) => e.stopPropagation()}
+        <button
+          className="absolute top-2 right-2 text-2xl font-bold text-gray-600"
+          onClick={onClose}
         >
-          <button
-            className="absolute top-2 right-2 text-2xl font-bold text-gray-600"
-            onClick={onClose}
-          >
-            &times;
-          </button>
+          &times;
+        </button>
+        <div className="justify-center flex">
           <h2 className="text-2xl text-center font-bold mb-4 dark:text-black">
             {project.name}
           </h2>
-          <div className="flex flex-wrap justify-center gap-2 mb-4">
-            {project.techStack.map((tech) => (
-              <span key={tech} className="px-2 py-1 bg-gray-500 text-white rounded">
-                {tech}
-              </span>
-            ))}
-          </div>
-          <p className="text-lg mb-4 dark:text-black text-center">
-            {project.description}
-          </p>
+          <Link href={project.link} target="_blank">
+            <AiFillGithub className="text-3xl ml-2 hover:scale-[1.2] transition-all duration-500 dark:text-black" />
+          </Link>
         </div>
+        <div className="flex flex-wrap justify-center gap-2 mb-4">
+          {project.techStack.map((tech) => (
+            <span
+              key={tech}
+              className="px-2 py-1 bg-gray-500 text-white rounded"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <p className="text-lg mb-4 dark:text-black text-center">
+          {project.description}
+        </p>
       </div>
-    );
-  };
-  
+    </div>
+  );
+};
+
 const Projects = () => {
   // Correctly initialize the scrollContainer with a type
   const scrollContainer = useRef(null);
@@ -120,7 +130,7 @@ const Projects = () => {
                 <div className="bg-gray-400 text-white p-6 rounded-t-3xl w-full text-center">
                   <h3 className="text-lg font-bold">{project.name}</h3>
                   <div className="flex gap-1 mt-1 flex-wrap justify-center">
-                    {project.techStack.map((tech) => (
+                    {project.techStackDisplay.map((tech) => (
                       <p
                         className="px-1 text-sm rounded bg-gray-500 text-white"
                         key={tech}
@@ -155,7 +165,9 @@ const Projects = () => {
           </button>
         </div>
       </section>
-      {selectedProject && <Modal project={selectedProject} onClose={closeModal} />}
+      {selectedProject && (
+        <Modal project={selectedProject} onClose={closeModal} />
+      )}
     </Fragment>
   );
 };
