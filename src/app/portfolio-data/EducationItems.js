@@ -6,6 +6,6 @@ export const EducationData = [
     place: "Ames, Iowa",
     fromTo: "2021 - 2025",
     statusOrPrecentage: "Pursuing",
-    gpa: "3.61",
+    gpa: "3.67",
   },
 ];
