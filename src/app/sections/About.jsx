@@ -64,18 +64,18 @@ const About = () => {
               I&apos;m Joshua Chiang
             </p>
             <p className="text-center md:text-left text-red-600 mt-1">
-              Software Engineer at Iowa State University
+              Software Engineer | Iowa State University Graduate
             </p>
 
             <div className="mt-5 justify-evenly text-justify">
               <p className="text-gray-600 dark:text-gray-300">
-                Hello my name is Joshua but I go by my middle name Steven, I am
-                a Software Engineer at Iowa State University. I was born and
-                raised in Lara, Venezuela. I am a very passionate person about
-                technology and software development. I tend to have an
-                inclination towards backend development, as is what I have been
-                mostly exposed to. However, I love to learn new things and I am
-                always looking for new challenges.
+                Hello, my name is Joshua, I go by my middle name Steven. I am
+                a Software Engineer and Iowa State University graduate, based in the United States.
+                I am deeply passionate about technology and software development, with a particular
+                love for building full stack websites and applications with React. While I have an inclination 
+                towards backend development based on my experience, I've been focusing 
+                more on web and app development recently. I love learning new technologies 
+                and am always eager to take on new challenges that push my boundaries.
               </p>
             </div>
           </div>
