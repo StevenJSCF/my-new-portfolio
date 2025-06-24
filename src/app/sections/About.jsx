@@ -72,9 +72,9 @@ const About = () => {
                 Hello, my name is Joshua, I go by my middle name Steven. I am
                 a Software Engineer and Iowa State University graduate, based in the United States.
                 I am deeply passionate about technology and software development, with a particular
-                love for building full stack websites and applications with React. While I have an inclination 
-                towards backend development based on my experience, I've been focusing 
-                more on web and app development recently. I love learning new technologies 
+                love for building full stack websites and applications with React. While I have an inclination
+                towards backend development based on my experience, I&apos;ve been focusing
+                more on web and app development recently. I love learning new technologies
                 and am always eager to take on new challenges that push my boundaries.
               </p>
             </div>
