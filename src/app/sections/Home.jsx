@@ -101,7 +101,7 @@ const Intro = () => {
               "pop-down-2 translate-x-[500px] transition-all opacity-0 duration-700 w-[300px] h-[300px] md:w-[500px] md:h-[500px]  bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat rounded-full shadow-black dark:shadow-[#d6d6d6] shadow-lg"
             }
             ref={profileRef}
-            style={{ backgroundImage: "url(/images/profile-pic.jpg)" }}
+            style={{ backgroundImage: "url(/images/profile-pic.png)" }}
           />
         </div>
       </section>
