@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/next"
 import { ThemeContextProvider } from "../components/navbar/ThemeContext"
 
 const geistSans = localFont({
@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
       <ThemeContextProvider>
         {children}
       </ThemeContextProvider>
+      <Analytics />
       </body>
     </html>
   );
